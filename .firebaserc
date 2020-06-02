@@ -1,1 +1,5 @@
-{}
+{
+  "projects": {
+    "staging": "chatty-f1a62"
+  }
+}
