@@ -1,8 +1,8 @@
 import firebase from 'firebase';
 const config = {
-    apiKey: "ADD-YOUR-DETAILS-HERE",
-    authDomain: "ADD-YOUR-DETAILS-HERE",
-    databaseURL: "ADD-YOUR-DETAILS-HERE"
+    apiKey: "AIzaSyBxkEuBeaA8YxgBzswaS3BqGmCdzYCGyXM",
+    authDomain: "chatty-f1a62.firebaseapp.com",
+    databaseURL: "https://chatty-f1a62.firebaseio.com"
 };
 
 firebase.initializeApp(config);
