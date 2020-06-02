@@ -11,6 +11,8 @@ export default class Chat extends Component {
             readError: null,
             writeError: null
         };
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     async componentDidMount() {
@@ -28,6 +30,27 @@ export default class Chat extends Component {
         }
     }
 
+    handleChange() {
+        this.setState({
+            content: event.target.value
+        });
+    }
+
+    async handleSubmit() {
+        event.preventDefault();
+        this.setState({ writeError: null });
+        try {
+            await db.ref("chats").push({
+                content: this.state.content,
+                timestamp: Date.now(),
+                uid: this.state.user.uid
+            });
+            this.setState({ content: '' });
+        } catch (error) {
+            this.setState({ writeError: error.message });
+        }
+    }
+
     render() {
         return (
             <div>
@@ -36,7 +59,7 @@ export default class Chat extends Component {
                         return <p key={chat.timestamp}>{chat.content}</p>
                     })}
                 </div>
-                {# message form #}
+                {/* message form */}
                 <form onSubmit={this.handleSubmit}>
                     <input onChange={this.handleChange} value={this.state.content}></input>
                     {this.state.error ? <p>{this.state.writeError}</p> : null}
