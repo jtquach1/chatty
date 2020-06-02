@@ -30,13 +30,13 @@ export default class Chat extends Component {
         }
     }
 
-    handleChange() {
+    handleChange(event) {
         this.setState({
             content: event.target.value
         });
     }
 
-    async handleSubmit() {
+    async handleSubmit(event) {
         event.preventDefault();
         this.setState({ writeError: null });
         try {
