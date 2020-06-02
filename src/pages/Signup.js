@@ -59,7 +59,7 @@ export default class Signup extends Component {
                     </h1>
                     <p>Fill in the form below to create an account.</p>
                     <div>
-                        <input placeholder="Email" name="Email" type="email" onChange={this.handleChange} value={this.state.email}></input>
+                        <input placeholder="Email" name="email" type="email" onChange={this.handleChange} value={this.state.email}></input>
                     </div>
                     <div>
                         <input placeholder="Password" name="password" type="password" onChange={this.handleChange} value={this.state.password}></input>

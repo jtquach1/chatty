@@ -47,7 +47,7 @@ export default class Login extends Component {
                         <button type="submit">Login</button>
                     </div>
                     <hr />
-                    <p>Don't have an account? <Link to="/login">Sign up</Link></p>
+                    <p>Don't have an account? <Link to="/signup">Sign up</Link></p>
                 </form>
             </div>
         );
