@@ -23,9 +23,9 @@
                 g = a.n(d);
             a(39), a(41);
             g.a.initializeApp({
-                apiKey: "AIzaSyBzk5hQ1ILipsKI2zlwagfbogOSn9YQBTw",
-                authDomain: "chatty-36be6.firebaseapp.com",
-                databaseURL: "https://chatty-36be6.firebaseio.com"
+                apiKey: "AIzaSyBxkEuBeaA8YxgBzswaS3BqGmCdzYCGyXM",
+                authDomain: "chatty-f1a62.firebaseapp.com",
+                databaseURL: "https://chatty-f1a62.firebaseio.com"
             });
             var v = g.a.auth,
                 f = g.a.database();
